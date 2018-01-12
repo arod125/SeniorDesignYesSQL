@@ -12,33 +12,32 @@
     <link rel="stylesheet/less" type="text/css" href="../stylesheets/style.less"/>
     <link rel="stylesheet" href="../stylesheets/style.css"/>
     <scripts src="../stylesheets/less.js-2.5.3" type="text/javascript"></scripts>
-
+    <script src="../js/main.js"></script>
   </head>
 
 <body>
-
+  <div id="profileNav"> 
+    <img src="#" alt="profile Pic" height="25px" width="25px">
+    <a href="#">User Settings</a>
+    <a href="#">Saved Queries</a>
+    <a href="#">Connection</a>
+    <a href="#">Logs</a>
+  </div>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">YesSQL</a>
   </nav>
-  <header style="color: black; margin-top: 80px; text-align: center; font-size: 50px;"><h3> Main Interface </h3> </header>
+  <div id="content">
   <div class="container">
     <div class="row">
-      <div class="col-2"> </div>
-      <div class="col-3 menuBlock""> 
-        <input class="menu" type="button" onclick="location.href='./engineerUser.html';" value="User Options" 
-        />
-        <input class="menu" type="button" onclick="location.href='./engineerUser.html';" value="Saved Queries" />
-        <input class="menu" type="button" onclick="location.href='./engineerUser.html';" value="SQL Connection" />
+      <div class="col-2"></div>
+      <div class="col-8 menu">
+        <input id="profile" type="button" value="Profile" onclick="profileNav()"/>
+        <input id="query" type="button" value="Query Options"/>
+        <input id="dbOpts" type="button" value="Database Connections"/>
       </div>
-      <div class="col-2"> </div>
-      <div class="col-3 menuBlock"> 
-        <input class="menu" type="button" onclick="location.href='./engineerUser.html';" value="Workspace" 
-        />
-        <input class="menu" type="button" onclick="location.href='./engineerUser.html';" value="Export Saved Queries" />
-        <input class="menu" type="button" onclick="location.href='./engineerUser.html';" value="NoSQL Connection" />
-      </div>
-      <div class="col-2"> </div>
+      <div class="col-2"></div>
     </div>
+  </div>
   </div>
 
 
