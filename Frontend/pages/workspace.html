@@ -31,7 +31,7 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="mainInterface.html">Home</a>
       <a class="nav-item nav-link" href="http://www.cci.drexel.edu/seniordesign/index.html">Blog</a>
-      <a class="nav-item nav-link" href="#">About</a>
+      <a class="nav-item nav-link" href="about.html">About</a>
     </div>
   </div>
 </nav>
@@ -55,8 +55,8 @@
     <div class="col-sm-10">
       <h1 class="page-header wsActionBtns"> Workspace 
         <div class="btn-group">
-          <button type="button" class="btn">Run</button>
-          <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="btn btn-outline-warning" onclick="queryLoading()">Run</button>
+          <button type="button" class="btn btn-outline-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            <span class="sr-only">Toggle Dropdown</span>
           </button>
           <div class="dropdown-menu">
@@ -67,6 +67,9 @@
           </div>
         </div>
       </h1>
+      <div class="progress">
+        <div id="progress" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+      </div>
       <form class="mainWS">
         <div class="form-group">
           <textarea class="form-control" rows="8"></textarea>
@@ -74,11 +77,11 @@
 
       </form>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6 sqlResults">
           <p> place holder SQL results</p>
 
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6 noSqlResults">
           <p> place holder NoSQL results</p>
 
 
@@ -95,5 +98,6 @@
 <!-- Popper JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
   <script src="../stylesheets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

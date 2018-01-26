@@ -1,12 +1,7 @@
-let navOpen = false;
-function profileNav() {
-	if(navOpen){
-		document.getElementById("profileNav").style.width = "0%";
-		document.getElementById("content").style.marginLeft = "0%";
-		navOpen = false;
-	} else {
-		document.getElementById("profileNav").style.width = "80%";
-		document.getElementById("content").style.marginLeft = "80%";
-		navOpen = true;
+function queryLoading() {
+	let inProgress = true;
+	if(inProgress){
+		inProgress = false;
+		document.getElementById("progress").className = document.getElementById("progress").className + " progress-bar-animated";
 	}
 }

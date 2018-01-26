@@ -1,6 +1,10 @@
 /******************** 
 mixins 
 ********************/
+.results(){
+	background-color: snow;
+	height: 125px;
+}
 
 .btn() {
 	width: 185px;
@@ -20,6 +24,9 @@ mixins
 	.btn();
 }
 
+body {
+	background:linear-gradient(to right,black,rgb(38,38,38));
+}
 
 
 /*****************************
@@ -44,7 +51,20 @@ Main Interace Classes and IDs
 	
 }
 
+.myNav {
+	display:flex;
+	justify-content: space-evenly;
+}
 
+.dropdown-menu {
+	border: 1px solid #ffc107;
+	background-color: #ffc107;
+}
+
+.dropdown-item{
+	background-color: #ffc107;
+	color: #212529;
+}
 
 /**************************
 Workspace classes and IDs 
@@ -54,7 +74,9 @@ Workspace classes and IDs
 	bottom: 0;
 	display:block;
 	padding: 20px;
-	background-color: #e5e6e6;
+	background-color: transparent;
+	border: 1px solid #007bff;
+	margin-top: 10px;
 }
 
 .mainWS {
@@ -62,5 +84,29 @@ Workspace classes and IDs
 }
 
 .wsActionBtns {
-	border-bottom: 3px solid black;
+}
+
+.noSqlResults{
+	.results();
+}
+
+.sqlResults{
+	.results();
+}
+
+/**************************
+  Profile classes and IDs
+***************************/
+
+.boxes {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.profInfo {
+	//display:flex;
+	border: 1px solid #17a2b8;
+	margin-top: 5px;
+	padding-top: 5px;
 }
