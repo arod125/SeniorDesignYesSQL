@@ -17,7 +17,6 @@
     <link rel="stylesheet/less" type="text/css" href="../stylesheets/style.less"/>
     <!--Original JS -->
     <script src="../js/main.js"></script>
-
   </head>
 <body>
 
@@ -72,9 +71,62 @@
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
               <a class="dropdown-item" href="#">Saved Connections</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">New SQL connections</a>
-              <a class="dropdown-item" href="#">New NoSQL connections</a>
+              <a class="dropdown-item" type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="newSQL">New SQL connections</a>
+              <a class="dropdown-item" type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="newNoSQL" >New NoSQL connections</a>
 
+            </div>
+          </div>
+<!--Modal/Dialog Box info for SQL -->
+          <div class="modal fade" id="newSQL" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">New SQL Connection</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+
+                  <div class="form-group">
+                    <label for="typeOfDatabase"> Type of SQL database: </label>
+                    <select class="form-control form-control-sm">
+                      <option>Oracle Database</option>
+                    </select>
+                    <label for="hostname"> HostName: </label>
+                      <input type="#" class="form-control" id="" aria-describedby="computer hostname should be designated here" placeholder="hostname@localhost">
+                    <label for="portNumber"> Port Number: </label>
+                      <input type="#" class="form-control" id="" aria-describedby="Port Number should be used here" placeholder="Port Number">
+                    <label for="jdbcConnection"> JDBC Connection Address: </label>
+                      <input type="#" class="form-control" id="" aria-describedby="JDBC home for DB should be here." placeholder="JDBC">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--Modal/Dialog Box info for NoSQL -->
+          <div class="modal fade" id="newNoSQL" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">New NoSQL Connection</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -90,10 +142,17 @@
 
 
 </footer>
+<script src="../js/jquery/jquery-3.3.1.js"></script>
+<script>
+$(document).on(function(){
+  $("#newSQL").modal();
+  $("#newNoSQL").modal();
+});
 
+</script>
 
 <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 <!-- Popper JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>

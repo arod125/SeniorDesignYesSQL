@@ -5,3 +5,7 @@ function queryLoading() {
 		document.getElementById("progress").className = document.getElementById("progress").className + " progress-bar-animated";
 	}
 }
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})

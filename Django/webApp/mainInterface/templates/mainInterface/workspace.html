@@ -1,0 +1,73 @@
+{% extends "mainInterface/header.html" %}
+
+{% block content %}
+	
+<!--Main Content space -->
+<div class="container-fluid"> 
+  <div class="row">
+    <nav class="col-sm-2">
+      <ul class="nav nav-pills flex-column sidebar">
+        <li class="nav-item"><a href="">Table1</a></li>
+        <li class="nav-item"><a href="">Table1</a></li>
+      </ul>
+    </nav>
+
+    <div class="col-sm-10">
+      <h1 class="page-header wsActionBtns" style="color:snow;"> Workspace 
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-warning" onclick="queryLoading()">Run</button>
+          <button type="button" class="btn btn-outline-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Save</a>
+            <a class="dropdown-item" href="#" onclick="removeText()">Clear</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Edit DB connection</a>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Part List
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">OptionOne</a>
+            <a class="dropdown-item" href="#">OptionTwo</a>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Equipment
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">OptionOne</a>
+            <a class="dropdown-item" href="#">OptionTwo</a>
+          </div>
+        </div>
+      </h1>
+      <div class="progress">
+        <div id="progress" class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+      </div>
+      <form class="mainWS">
+        <div class="form-group">
+          <textarea class="form-control" rows="8"></textarea>
+        </div>
+
+      </form>
+      <div class="row">
+        <div class="col-sm-6 sqlResults">
+          <p> place holder SQL results</p>
+
+        </div>
+        <div class="col-sm-6 noSqlResults">
+          <p> place holder NoSQL results</p>
+
+
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

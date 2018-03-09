@@ -1,0 +1,114 @@
+{% extends "mainInterface/header.html" %}
+
+{% block content %}
+	
+	<!-- Hero with Short description and images of engines and shit. -->
+<section class="jumbotron">
+  <div class="jumboImg"></div>
+  <div class="container">
+    <h1 > YesSQL </h1>
+    <p style="padding: 0px 25px;">Our team is striving to bridge the gap of compatibility for SQL and NoSQL databases. Click below to learn more of our progress.</p>
+    <p><a class="btn btn-primary btn-lg" href="about.html" role="button">More</a></p>
+  </div>
+</section>
+
+<!-- Main Content / Options -->
+<div class="container">
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8 myNav">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <div class="btn-group btn-group-lg" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <a class="dropdown-item" href="{% url 'profile' %}">View Profile</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Logs</a>
+            </div>
+          </div>
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop2" type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Workspace</button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+              <a class="dropdown-item" href="#">Saved Queries</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="workspace.html">Go to workspace</a>
+            </div>
+          </div>
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop3" type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Database</button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
+              <a class="dropdown-item" href="#">Saved Connections</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" class="btn btn-outline-warning" data-toggle="modal" data-target="#sqlDialog">New SQL connections</a>
+              <a class="dropdown-item" class="btn btn-outline-warning" data-toggle="modal" data-target="#NoSQLDialog" >New NoSQL connections</a>
+
+            </div>
+          </div>
+<!--Modal/Dialog Box info for SQL -->
+          <div class="modal fade" id="sqlDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">New SQL Connection</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="typeOfDatabase"> Type of SQL database: </label>
+                    <select class="form-control form-control-sm">
+                      <option>Oracle Database</option>
+                    </select>
+                    <label for="hostname"> HostName: </label>
+                      <input type="#" class="form-control" id="" aria-describedby="computer hostname should be designated here" placeholder="hostname@localhost">
+                    <label for="portNumber"> Port Number: </label>
+                      <input type="#" class="form-control" id="" aria-describedby="Port Number should be used here" placeholder="Port Number">
+                    <label for="jdbcConnection"> JDBC Connection Address: </label>
+                      <input type="#" class="form-control" id="" aria-describedby="JDBC home for DB should be here." placeholder="JDBC">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--Modal/Dialog Box info for NoSQL -->
+          <div class="modal fade" id="NoSQLDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">New NoSQL Connection</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="typeOfDatabase"> Type of NoSQL database: </label>
+                    <select class="form-control form-control-sm">
+                      <option>MongoDB</option>
+                    </select>
+                    <label for="placeholder"> placeholder: </label>
+                      <input type="#" class="form-control" id="" aria-describedby="computer placeholder should be designated here" placeholder="hostname@localhost">
+                    <label for="portNumber"> Port Number: </label>
+                      <input type="#" class="form-control" id="" aria-describedby="Port Number should be used here" placeholder="Port Number">
+                    <label for="jdbcConnection"> JDBC Connection Address: </label>
+                      <input type="#" class="form-control" id="" aria-describedby="JDBC home for DB should be here." placeholder="JDBC">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="col-sm-2"></div>
+    </div>
+</div>
+{% endblock %}
