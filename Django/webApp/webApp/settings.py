@@ -77,9 +77,33 @@ WSGI_APPLICATION = 'webApp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'yessql',
+        'USER': 'jbs96',
+        'PASSWORD': 'spars57-quad',
+        'HOST': '129.25.10.155',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
+    # 'default': {},
+    # # 'default': {
+    # #     'ENGINE': 'django.db.backends.sqlite3',
+    # #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # # }
+    # 'sql_db': {
+    #     'NAME':'yessql',
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'USER': 'jbs96',
+    #     'PASSWORD':'spars57-quad',
+    #     'HOST':'129.25.10.155',
+    #     'PORT':'',
+    # }
+    # # },
+    # # 'nosql_db': {
+    # #     'NAME': 'yessql_mongo',
+    # #     'ENGINGE': 'django.db',
+    # #     'USER': '',
+    # #     'PASSWORD':''
+    # # }
 }
 
 

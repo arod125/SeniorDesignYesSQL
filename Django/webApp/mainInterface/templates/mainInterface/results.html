@@ -50,7 +50,13 @@
       </div>
       <form class="mainWS">
         <div class="form-group">
-          <textarea class="form-control" rows="8"></textarea>
+          <textarea class="form-control" rows="8">
+              {% for d in steel %}
+              {{ d.PartName }}
+              {% endfor %}
+
+
+          </textarea>
         </div>
 
       </form>
